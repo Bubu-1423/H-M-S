@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHINE HOSPITAL</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script>
+      // Router (static/any host friendly)
+      // If browser path ends with /tv -> go to tv.html
+      // If it ends with /admin -> go to index.html (admin-shell inside)
+      // Otherwise -> index.html
+      (function () {
+        var path = (window.location.pathname || "").toLowerCase();
+
+        function go(url) {
+          window.location.replace(url);
+        }
+
+        if (path.endsWith("/tv") || path.endsWith("/tv.html")) {
+          go("/tv.html");
+          return;
+        }
+
+        // admin route can be '/admin' or '/admin.html' depending on hosting
+        if (path.endsWith("/admin") || path.endsWith("/admin.html")) {
+          go("/index.html");
+          return;
+        }
+
+        go("/index.html");
+        
+      })();
+    </script>
+  </body>
+</html>

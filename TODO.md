@@ -1,0 +1,5 @@
+- [ ] Fix admin panel open issue on click (landing -> /admin).
+- [ ] Ensure /admin route works on GitHub Pages/static hosting.
+- [ ] Update landing.js routing logic + add router fallback if needed.
+- [ ] Test locally by running Server.js and opening /admin, /index.html, /tv.html.
+- [ ] Test publish/live socket still works on /admin.
